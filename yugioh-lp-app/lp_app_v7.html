@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LP App</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Ubuntu"
+    />
+    <script src="code.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  </head>
+  <body>
+    <div class="app">
+      <div id="number_generators">
+        <div class="ng_row">
+          <div class="ng_row_x">
+            <div class="number_generators">
+              <button class="number_generator_button" data-cy="rng_x" onclick="generateRandomNumberX()">RNG between 1
+                and x:</button>
+            </div>
+            <div class="ngx_input">
+              <input type="number" data-cy="ngx_input" id="ngx_input" />
+            </div>
+          </div>
+          <div class="ng_labels_x">
+            <label data-cy="one_x_label" id="one_x_label"></label>
+          </div>
+        </div>
+        <div class="ng_row">
+          <div class="number_generators">
+            <button class="number_generator_button" data-cy="rng_dice" onclick="generateRandomNumberDice()">RNG between 1 and 6:</button>
+          </div>
+          <div class="ng_labels">
+            <label data-cy="one_six_label" id="one_six_label"></label>
+          </div>
+        </div>
+        <div class="ng_row">
+          <div class="number_generators" >
+            <button class="number_generator_button" data-cy="rng_coin" onclick="generateRandomNumberCoin()">RNG between 1 and 2: </button>
+          </div>
+          <div class="ng_labels">
+            <label data-cy="zero_one_label" id="zero_one_label"></label>
+          </div>
+        </div>
+      </div>
+      <div id="opponent">
+        <div class="op_lp_section">
+          <label class="name_labels">Player 2:</label>
+          <label id="opponent_lp">8.000</label>
+        </div>
+        <div class="op_lp_updown">
+          <div>
+            <input type="number" id="op_increase" />
+          </div>
+          <div class="buttongroup">
+            <button class="lp_change_button" onclick="increase(false)">+</button>
+            <button class="lp_change_button" onclick="decrease(false)">-</button>
+          </div>
+        </div>
+        <div class="op_history">
+          <label id="opponent_lp_history">8.000<br /></label>
+        </div>
+      </div>
+      <div id="player">
+        <div class="pl_lp_section">
+          <label class="name_labels">Player 1:</label>
+          <label id="player_lp">8.000</label>
+        </div>
+        <div class="pl_lp_updown">
+          <div>
+            <input type="number" id="pl_increase" />
+          </div>
+          <div class="buttongroup">
+            <button class="lp_change_button" onclick="increase(true)">+</button>
+            <button class="lp_change_button" onclick="decrease(true)">-</button>
+          </div>
+        </div>
+        <div class="pl_history">
+          <label id="player_lp_history">8.000<br /></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

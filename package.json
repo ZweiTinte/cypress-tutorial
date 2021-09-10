@@ -1,0 +1,23 @@
+{
+  "name": "cypress-tutorial",
+  "version": "1.0.0",
+  "description": "Cypress test examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZweiTinte/cypress-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZweiTinte/cypress-tutorial/issues"
+  },
+  "homepage": "https://github.com/ZweiTinte/cypress-tutorial#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^8.3.1"
+  }
+}

@@ -1,0 +1,239 @@
+.app {
+  position: relative;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Ubuntu";
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  text-align: center;
+  width: 100px;
+}
+
+.ng_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number_generators {
+  margin-left: 5px auto;
+  display: inline-block;
+  position: relative;
+}
+
+.buttongroup {
+  margin: 5px;
+}
+.ng_row_x {
+  display: flex;
+  justify-content: left;
+}
+.ng_labels_x {
+  margin-right: 5px auto;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  line-height: 35px;
+}
+
+.ng_labels {
+  margin-right: 5px auto;
+  display: inline-block;
+  position: relative;
+  line-height: 35px;
+}
+
+.number_generator_button {
+  margin: 5px auto;
+  position: relative;
+  display: flex;
+  justify-content: left;
+}
+
+.ngx_input {
+  margin-top: 2px;
+  margin-left: 5px;
+  display: inline-block;
+  position: relative;
+  height: auto;
+}
+
+#ngx_input {
+  position: relative;
+  width: 50px;
+  margin-top: 5px;
+}
+
+#one_six_label {
+  margin-right: 5px auto;
+  display: flex;
+  justify-content: right;
+}
+
+#zero_one_label {
+  margin-right: 5px auto;
+  display: flex;
+  justify-content: right;
+}
+
+#one_x_label {
+  margin-right: 5px auto;
+  display: flex;
+  justify-content: right;
+  width: auto;
+}
+
+#number_generators {
+  display: fblock;
+  top: 0%;
+  height: auto;
+  position: relative;
+  background-color: #666666;
+  padding: 5px;
+  vertical-align: top;
+  margin: 5px auto;
+  width: auto;
+  min-width: 120px;
+}
+
+#opponent {
+  display: inline-block;
+  top: 0%;
+  height: auto;
+  position: relative;
+  background-color: #666666;
+  padding: 5px;
+  vertical-align: top;
+  width: auto;
+  min-width: 120px;
+}
+
+#player {
+  display: inline-block;
+  top: 0%;
+  height: auto;
+  position: relative;
+  background-color: #666666;
+  padding: 5px;
+  vertical-align: top;
+  width: auto;
+  min-width: 120px;
+}
+
+.pl_lp_section {
+  background-color: #666666;
+  position: relative;
+  top: 0%;
+  width: auto;
+}
+
+.op_lp_section {
+  background-color: #666666;
+  position: relative;
+  top: 0%;
+  width: auto;
+}
+
+#player_lp {
+  font-size: 24px;
+  width: auto;
+}
+
+#opponent_lp {
+  font-size: 24px;
+  width: auto;
+}
+
+#player_lp_history {
+  text-align: right;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+}
+
+#opponent_lp_history {
+  text-align: right;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+}
+
+.pl_lp_updown {
+  background-color: #666666;
+  text-align: center;
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+}
+
+.op_lp_updown {
+  background-color: #666666;
+  text-align: center;
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+}
+
+.pl_history {
+  background-color: #666666;
+  text-align: right;
+  position: relative;
+  width: auto;
+}
+
+.op_history {
+  background-color: #666666;
+  text-align: right;
+  position: relative;
+  width: auto;
+}
+
+label {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 2px;
+  white-space: pre-wrap;
+  width: auto;
+}
+
+.name_labels {
+  font-size: 16px;
+}
+
+.lp_change_button {
+  min-width: 48px;
+  min-height: 34px;
+}
+
+button {
+  border-radius: 3px;
+  border: 1px solid rgb(97, 2, 43);
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 5px 8px 5px 8px;
+  box-shadow: inset 1px 1px 4px rgb(31, 6, 17);
+  background: rgb(92, 24, 92);
+  width: auto;
+  min-width: 30px;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px #000000;
+  min-height: 30px;
+  position: relative;
+}
+
+button:hover {
+  background-color: #b741c7;
+}

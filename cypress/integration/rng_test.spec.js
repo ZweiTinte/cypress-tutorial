@@ -2,9 +2,9 @@ describe("rng buttons test", () => {
   it("tests rng button initail state", () => {
     cy.visit(Cypress.env("url"));
 
-    cy.get("[data-cy='one_x_label']").invoke("text").should("equal", "");
-    cy.get("[data-cy='one_six_label']").invoke("text").should("equal", "");
-    cy.get("[data-cy='zero_one_label']").invoke("text").should("equal", "");
+    cy.get("[data-cy='one_x_label']").invoke("text").should("be.empty");
+    cy.get("[data-cy='one_six_label']").invoke("text").should("be.empty");
+    cy.get("[data-cy='zero_one_label']").invoke("text").should("be.empty");
   });
 
   it("tests rng-x button", () => {

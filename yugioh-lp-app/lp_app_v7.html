@@ -11,8 +11,6 @@
       href="//fonts.googleapis.com/css?family=Ubuntu"
     />
     <script src="code.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
   </head>
   <body>
     <div class="app">
@@ -50,20 +48,20 @@
       </div>
       <div id="opponent">
         <div class="op_lp_section">
-          <label class="name_labels">Player 2:</label>
-          <label id="opponent_lp">8.000</label>
+          <label class="name_labels" data-cy="op_name_label">Player 2:</label>
+          <label id="opponent_lp" data-cy="op_lp_label">8.000</label>
         </div>
         <div class="op_lp_updown">
           <div>
-            <input type="number" id="op_increase" />
+            <input type="number" id="op_increase" data-cy="op_lp_input"/>
           </div>
           <div class="buttongroup">
-            <button class="lp_change_button" onclick="increase(false)">+</button>
-            <button class="lp_change_button" onclick="decrease(false)">-</button>
+            <button class="lp_change_button" data-cy="op_increase_button" onclick="increase(false)">+</button>
+            <button class="lp_change_button" data-cy="op_decrease_button" onclick="decrease(false)">-</button>
           </div>
         </div>
         <div class="op_history">
-          <label id="opponent_lp_history">8.000<br /></label>
+          <label id="opponent_lp_history" data-cy="op_history_label">8.000<br /></label>
         </div>
       </div>
       <div id="player">

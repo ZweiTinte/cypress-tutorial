@@ -16,8 +16,7 @@
     "url": "https://github.com/ZweiTinte/cypress-tutorial/issues"
   },
   "homepage": "https://github.com/ZweiTinte/cypress-tutorial#readme",
-  "dependencies": {},
   "devDependencies": {
-    "cypress": "^8.4.1"
+    "cypress": "^8.5.0"
   }
 }

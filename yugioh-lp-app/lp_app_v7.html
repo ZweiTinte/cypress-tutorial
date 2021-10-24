@@ -66,20 +66,20 @@
       </div>
       <div id="player">
         <div class="pl_lp_section">
-          <label class="name_labels">Player 1:</label>
-          <label id="player_lp">8.000</label>
+          <label class="name_labels" data-cy="pl_name_label">Player 1:</label>
+          <label id="player_lp" data-cy="pl_lp_label">8.000</label>
         </div>
         <div class="pl_lp_updown">
           <div>
-            <input type="number" id="pl_increase" />
+            <input type="number" id="pl_increase" data-cy="pl_lp_input"/>
           </div>
           <div class="buttongroup">
-            <button class="lp_change_button" onclick="increase(true)">+</button>
-            <button class="lp_change_button" onclick="decrease(true)">-</button>
+            <button class="lp_change_button" data-cy="pl_increase_button" onclick="increase(true)">+</button>
+            <button class="lp_change_button" data-cy="pl_decrease_button" onclick="decrease(true)">-</button>
           </div>
         </div>
         <div class="pl_history">
-          <label id="player_lp_history">8.000<br /></label>
+          <label id="player_lp_history" data-cy="pl_history_label">8.000<br /></label>
         </div>
       </div>
     </div>

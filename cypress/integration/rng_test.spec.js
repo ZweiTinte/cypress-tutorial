@@ -2,9 +2,7 @@ describe("rng buttons test", () => {
   it("tests rng button initail state", () => {
     cy.visit(Cypress.env("url"));
 
-    cy.get("[data-cy='one_x_label']").invoke("text").should("be.empty");
-    cy.get("[data-cy='one_six_label']").invoke("text").should("be.empty");
-    cy.get("[data-cy='zero_one_label']").invoke("text").should("be.empty");
+    cy.assertEmptyRngLabels();
   });
 
   it("tests rng-x button", () => {
@@ -18,14 +16,7 @@ describe("rng buttons test", () => {
     cy.get("[data-cy='rng_x']").click();
 
     // assert the result
-    cy.get("[data-cy='one_x_label']")
-      .invoke("text")
-      .then(parseInt)
-      .should("be.gte", 1);
-    cy.get("[data-cy='one_x_label']")
-      .invoke("text")
-      .then(parseInt)
-      .should("be.lte", RANDOM_NUMBER);
+    cy.assertXRng(RANDOM_NUMBER);
   });
 
   it("tests rng-dice button", () => {
@@ -33,14 +24,7 @@ describe("rng buttons test", () => {
     cy.get("[data-cy='rng_dice']").click();
 
     // assert the result
-    cy.get("[data-cy='one_six_label']")
-      .invoke("text")
-      .then(parseInt)
-      .should("be.gte", 1);
-    cy.get("[data-cy='one_six_label']")
-      .invoke("text")
-      .then(parseInt)
-      .should("be.lte", 6);
+    cy.assertDiceRng();
   });
 
   it("tests rng-coin button", () => {
@@ -48,13 +32,6 @@ describe("rng buttons test", () => {
     cy.get("[data-cy='rng_coin']").click();
 
     // assert the result
-    cy.get("[data-cy='zero_one_label']")
-      .invoke("text")
-      .then(parseInt)
-      .should("be.gte", 1);
-    cy.get("[data-cy='zero_one_label']")
-      .invoke("text")
-      .then(parseInt)
-      .should("be.lte", 2);
+    cy.assertCoinRng();
   });
 });

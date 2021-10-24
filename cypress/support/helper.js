@@ -1,5 +1,11 @@
 export const OPPONENT = {
   name: "Player 2",
+  id: "op",
+};
+
+export const PLAYER = {
+  name: "Player 1",
+  id: "pl",
 };
 
 export const INITIAL_LP = "8.000";

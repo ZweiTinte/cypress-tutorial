@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ZweiTinte/cypress-tutorial#readme",
   "devDependencies": {
-    "cypress": "^8.5.0"
+    "cypress": "^8.6.0"
   }
 }

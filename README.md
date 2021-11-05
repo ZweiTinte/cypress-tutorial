@@ -7,5 +7,7 @@ Cypress test examples
 chmod +x ./cypress/shellScripts/runAllTests.sh
 
 bash ./cypress/shellScripts/runAllTests.sh
-or
+
+or with videos:
+
 bash ./cypress/shellScripts/runAllTests.sh video

@@ -1,4 +1,6 @@
 {
     "viewportHeight":600,
-    "viewportWidth":900
+    "viewportWidth":900,
+    "defaultCommandTimeout":8000,
+    "trashAssetsBeforeRuns":false
 }

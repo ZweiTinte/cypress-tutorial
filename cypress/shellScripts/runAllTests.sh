@@ -11,7 +11,7 @@ do
     ./node_modules/.bin/cypress run --browser firefox $video --spec $FILE
     if [ $? -ne 0 ]
     then
-        exit_code=1
+        exitCode=1
         allFailedTests+=( $FILE )
     fi
 done
@@ -23,4 +23,4 @@ else
     echo "No failed tests found."
 fi
 
-exit $exit_code
+exit $exitCode

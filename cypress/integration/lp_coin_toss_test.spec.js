@@ -1,7 +1,7 @@
 import { OPPONENT, PLAYER } from "../support/helper";
 
 describe("op coin toss test", () => {
-  it("tests initail state", () => {
+  it("tests initial state", () => {
     cy.visit(Cypress.env("url"));
 
     cy.assertEmptyRngLabels();

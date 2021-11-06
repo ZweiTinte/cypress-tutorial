@@ -3,6 +3,7 @@
 exitCode=0
 failedTests=()
 video="--config video=false"
+tests=$(find ./cypress/integration/ -mindepth 1 -maxdepth 1 -type f | wc -l)
 
 if [[ ! -z "$1" && "$1" == "video" ]]; then video=""; fi
 
@@ -12,12 +13,12 @@ do
     if [ $? -ne 0 ]
     then
         exitCode=1
-        allFailedTests+=( $FILE )
+        failedTests+=( $FILE )
     fi
 done
 
 if [ ${#failedTests[@]} -ne 0 ]; then
-    echo "${#failedTests[@]} failed tests found:"
+    echo "${#failedTests[@]} of $tests tests failed:"
     for i in "${failedTests[@]}"; do echo "$i"; done
 else
     echo "No failed tests found."

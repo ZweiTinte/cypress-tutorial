@@ -1,5 +1,6 @@
 .app {
   position: relative;
+  max-width: 20rem;
 }
 
 body {
@@ -29,12 +30,14 @@ input[type="number"] {
 }
 
 .buttongroup {
-  margin: 5px;
+  margin-top: 0.5rem;
 }
+
 .ng_row_x {
   display: flex;
   justify-content: left;
 }
+
 .ng_labels_x {
   margin-right: 5px auto;
   display: flex;
@@ -98,9 +101,24 @@ input[type="number"] {
   background-color: #666666;
   padding: 5px;
   vertical-align: top;
-  margin: 5px auto;
+  margin-bottom: 0.25rem;
   width: auto;
-  min-width: 120px;
+  min-width: 18rem;
+}
+
+#resetOrLoadGame {
+  display: fblock;
+  top: 0%;
+  height: auto;
+  position: relative;
+  background-color: #666666;
+  vertical-align: top;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  width: auto;
+  min-width: 18rem;
 }
 
 #opponent {
@@ -112,7 +130,7 @@ input[type="number"] {
   padding: 5px;
   vertical-align: top;
   width: auto;
-  min-width: 120px;
+  min-width: 8.6rem;
 }
 
 #player {
@@ -124,7 +142,30 @@ input[type="number"] {
   padding: 5px;
   vertical-align: top;
   width: auto;
-  min-width: 120px;
+  min-width: 8.6rem;
+}
+
+.resetOrLoadbutton {
+  display: inline-block;
+  top: 0%;
+  height: auto;
+  position: relative;
+  vertical-align: top;
+  width: auto;
+  min-width: 18rem;
+  max-width: 19rem;
+}
+
+#reset_button {
+  max-width: 8rem;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+#load_button {
+  max-width: 8rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .pl_lp_section {
@@ -142,12 +183,12 @@ input[type="number"] {
 }
 
 #player_lp {
-  font-size: 24px;
+  font-size: 1.4rem;
   width: auto;
 }
 
 #opponent_lp {
-  font-size: 24px;
+  font-size: 1.4rem;
   width: auto;
 }
 
@@ -165,21 +206,11 @@ input[type="number"] {
   width: auto;
 }
 
-.pl_lp_updown {
+.lp_updown {
   background-color: #666666;
   text-align: center;
   position: relative;
   padding: 5px;
-  margin: 5px;
-  width: auto;
-}
-
-.op_lp_updown {
-  background-color: #666666;
-  text-align: center;
-  position: relative;
-  padding: 5px;
-  margin: 5px;
   width: auto;
 }
 
@@ -206,26 +237,29 @@ label {
 }
 
 .name_labels {
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 .lp_change_button {
-  min-width: 48px;
-  min-height: 34px;
+  min-width: 2.5rem;
+  max-width: 3rem;
+  min-height: 2.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 button {
-  border-radius: 3px;
+  border-radius: 8px;
   border: 1px solid rgb(97, 2, 43);
   outline: none;
   cursor: pointer;
   color: #ffffff;
   padding: 5px 8px 5px 8px;
   box-shadow: inset 1px 1px 4px rgb(31, 6, 17);
-  background: rgb(92, 24, 92);
-  width: auto;
+  background: rgb(124, 43, 124);
+  width: 10rem;
   min-width: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 0.25rem;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;

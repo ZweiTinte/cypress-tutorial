@@ -1,3 +1,5 @@
+const BASE_LP = 8000;
+
 function addThousandSeparator(el) {
   return el.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
@@ -27,6 +29,18 @@ function generateRandomNumberX() {
       parseInt(document.getElementById("ngx_input").value)
     );
   }
+}
+
+function newGame() {
+  document.getElementById("player_lp").innerHTML = BASE_LP;
+  document.getElementById("opponent_lp").innerHTML = BASE_LP;
+  document.getElementById("player_lp_history").innerHTML = "";
+  document.getElementById("opponent_lp_history").innerHTML = "";
+  document.getElementById("one_x_label").innerHTML = "";
+  document.getElementById("one_six_label").innerHTML = "";
+  document.getElementById("zero_one_label").innerHTML = "";
+  document.getElementById("pl_increase").value = "";
+  document.getElementById("op_increase").value = "";
 }
 
 function increase(player) {

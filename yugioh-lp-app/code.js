@@ -67,7 +67,6 @@ function loadGame() {
     newLine.setAttribute("class", "buttongroup");
 
     buttonLabel.innerHTML = "Game " + (i + 1);
-    console.log(i, games);
     button.addEventListener("click", function () {
       load(i);
     });
@@ -96,6 +95,11 @@ function load(gameId) {
 function logLpChangeEvent(player, points) {
   const PLAYERNAME = player ? PLAYER_NAME : OPPONENT_NAME;
   game.push({ player: PLAYERNAME, lpChange: points });
+  setGameInfo();
+}
+
+function setGameInfo() {
+  document.getElementById("gameInfo").innerHTML = JSON.stringify(game);
 }
 
 function increase(player) {

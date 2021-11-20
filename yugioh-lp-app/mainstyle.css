@@ -156,6 +156,15 @@ input[type="number"] {
   max-width: 19rem;
 }
 
+#gameSelection {
+  margin-top: 0.1rem;
+}
+
+.loadButton {
+  max-width: 3rem;
+  margin-right: 0.5rem;
+}
+
 #reset_button {
   max-width: 8rem;
   margin-right: 0.25rem;

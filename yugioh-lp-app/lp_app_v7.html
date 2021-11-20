@@ -52,11 +52,12 @@
           <button id="reset_button" data-cy="reset_button" onclick="newGame()">New Game</button>
           <button id="load_button" data-cy="load_button" onclick="loadGame()">Load Game</button>
         </div>
+        <div id="gameSelection"></div>
       </div>
 
       <div id="opponent">
         <div class="op_lp_section">
-          <label class="name_labels" data-cy="op_name_label">Player 2:</label>
+          <label class="name_labels" id="opponentName" data-cy="op_name_label">Player 2:</label>
           <label id="opponent_lp" data-cy="op_lp_label">8.000</label>
         </div>
         <div class="lp_updown">
@@ -74,7 +75,7 @@
       </div>
       <div id="player">
         <div class="pl_lp_section">
-          <label class="name_labels" data-cy="pl_name_label">Player 1:</label>
+          <label class="name_labels" id="playerName" data-cy="pl_name_label">Player 1:</label>
           <label id="player_lp" data-cy="pl_lp_label">8.000</label>
         </div>
         <div class="lp_updown">

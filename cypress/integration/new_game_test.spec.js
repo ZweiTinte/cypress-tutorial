@@ -6,6 +6,8 @@ describe("new game test", () => {
 
     cy.simulateGame(PLAYER);
     cy.simulateGame(OPPONENT);
+
+    cy.assertGameInfo();
   });
 
   it("uses rng buttons", () => {
@@ -18,5 +20,10 @@ describe("new game test", () => {
     cy.assertInitialStateOf(OPPONENT);
     cy.assertInitialStateOf(PLAYER);
     cy.assertEmptyRngLabels();
+
+    cy.get("[data-cy='game_info']").then(($game) => {
+      const GAME = JSON.parse($game.text()).game;
+      cy.wrap(GAME.length).should("equal", 0);
+    });
   });
 });

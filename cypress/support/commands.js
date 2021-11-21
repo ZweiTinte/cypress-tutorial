@@ -31,6 +31,8 @@ import {
   INCREASE_RESULT,
   INITIAL_LP,
   LP_CHANGE_AMOUNT,
+  OPPONENT,
+  PLAYER,
 } from "./helper";
 
 Cypress.Commands.add("increaseLp", (player) => {
@@ -131,4 +133,19 @@ Cypress.Commands.add("simulateGame", (player) => {
   cy.get(`[data-cy='${player.id}_lp_label']`)
     .invoke("text")
     .should("equal", EXPECTED_LP);
+});
+
+Cypress.Commands.add("assertGameInfo", () => {
+  cy.get("[data-cy='game_info']").then(($game) => {
+    const GAME = JSON.parse($game.text()).game;
+    cy.wrap(GAME.length).should("equal", 4);
+    cy.wrap(GAME[0].player).should("equal", PLAYER.name);
+    cy.wrap(GAME[0].lpChange).should("equal", parseInt(LP_CHANGE_AMOUNT));
+    cy.wrap(GAME[1].player).should("equal", PLAYER.name);
+    cy.wrap(GAME[1].lpChange).should("equal", -parseInt(DECREASE_AMOUNT));
+    cy.wrap(GAME[2].player).should("equal", OPPONENT.name);
+    cy.wrap(GAME[2].lpChange).should("equal", parseInt(LP_CHANGE_AMOUNT));
+    cy.wrap(GAME[3].player).should("equal", OPPONENT.name);
+    cy.wrap(GAME[3].lpChange).should("equal", -parseInt(DECREASE_AMOUNT));
+  });
 });

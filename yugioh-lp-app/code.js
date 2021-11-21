@@ -40,6 +40,7 @@ function newGame() {
     games.push(game);
   }
   game = [];
+  setGameInfo();
   resetFields();
 }
 
@@ -105,7 +106,8 @@ function logLpChangeEvent(player, points) {
 }
 
 function setGameInfo() {
-  document.getElementById("gameInfo").innerHTML = JSON.stringify(game);
+  let gameInfo = { game: game };
+  document.getElementById("gameInfo").innerHTML = JSON.stringify(gameInfo);
 }
 
 function increase(player) {

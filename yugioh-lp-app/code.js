@@ -119,6 +119,7 @@ function increase(player) {
       );
       points = parseInt(document.getElementById("pl_increase").value);
       if (points) {
+        logLpChangeEvent(player, parseInt(points));
         let result = lp_before + points;
         let label = document.getElementById("player_lp_history");
         lp_before = addThousandSeparator(lp_before);
@@ -126,8 +127,6 @@ function increase(player) {
         result = addThousandSeparator(result);
         label.innerHTML += "+ " + points + " = " + result + "<br> ";
         document.getElementById("player_lp").innerHTML = result;
-      } else {
-        return;
       }
     }
   } else {
@@ -137,6 +136,7 @@ function increase(player) {
       );
       points = parseInt(document.getElementById("op_increase").value);
       if (points) {
+        logLpChangeEvent(player, parseInt(points));
         let result = lp_before + points;
         let label = document.getElementById("opponent_lp_history");
         lp_before = addThousandSeparator(lp_before);
@@ -144,12 +144,9 @@ function increase(player) {
         result = addThousandSeparator(result);
         label.innerHTML += "+ " + points + " = " + result + "<br> ";
         document.getElementById("opponent_lp").innerHTML = result;
-      } else {
-        return;
       }
     }
   }
-  logLpChangeEvent(player, parseInt(points));
 }
 
 function decrease(player) {
@@ -161,6 +158,7 @@ function decrease(player) {
       );
       points = parseInt(document.getElementById("pl_increase").value);
       if (points) {
+        logLpChangeEvent(player, parseInt(-points));
         let result = lp_before - points;
         if (result < 0) {
           result = 0;
@@ -171,8 +169,6 @@ function decrease(player) {
         result = addThousandSeparator(result);
         label.innerHTML += "- " + points + " = " + result + "<br> ";
         document.getElementById("player_lp").innerHTML = result;
-      } else {
-        return;
       }
     }
   } else {
@@ -182,6 +178,7 @@ function decrease(player) {
       );
       points = parseInt(document.getElementById("op_increase").value);
       if (points) {
+        logLpChangeEvent(player, parseInt(-points));
         let result = lp_before - points;
         if (result < 0) {
           result = 0;
@@ -192,10 +189,7 @@ function decrease(player) {
         result = addThousandSeparator(result);
         label.innerHTML += "- " + points + " = " + result + "<br> ";
         document.getElementById("opponent_lp").innerHTML = result;
-      } else {
-        return;
       }
     }
   }
-  logLpChangeEvent(player, -points);
 }

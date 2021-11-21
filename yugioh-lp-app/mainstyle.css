@@ -15,7 +15,7 @@ body {
 input[type="number"] {
   appearance: textfield;
   text-align: center;
-  width: 100px;
+  width: 6.5rem;
 }
 
 .ng_row {
@@ -24,7 +24,7 @@ input[type="number"] {
 }
 
 .number_generators {
-  margin-left: 5px auto;
+  margin-left: 0, 25rem auto;
   display: inline-block;
   position: relative;
 }
@@ -39,7 +39,7 @@ input[type="number"] {
 }
 
 .ng_labels_x {
-  margin-right: 5px auto;
+  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
   position: relative;
@@ -47,22 +47,22 @@ input[type="number"] {
 }
 
 .ng_labels {
-  margin-right: 5px auto;
+  margin-right: 0.25rem auto;
   display: inline-block;
   position: relative;
   line-height: 35px;
 }
 
 .number_generator_button {
-  margin: 5px auto;
+  margin: 0.3rem auto;
   position: relative;
   display: flex;
   justify-content: left;
 }
 
 .ngx_input {
-  margin-top: 2px;
-  margin-left: 5px;
+  margin-top: 0.1rem;
+  margin-left: 0.25rem;
   display: inline-block;
   position: relative;
   height: auto;
@@ -70,24 +70,24 @@ input[type="number"] {
 
 #ngx_input {
   position: relative;
-  width: 50px;
-  margin-top: 5px;
+  width: 3rem;
+  margin-top: 0.25rem;
 }
 
 #one_six_label {
-  margin-right: 5px auto;
+  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
 }
 
 #zero_one_label {
-  margin-right: 5px auto;
+  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
 }
 
 #one_x_label {
-  margin-right: 5px auto;
+  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
   width: auto;
@@ -99,7 +99,7 @@ input[type="number"] {
   height: auto;
   position: relative;
   background-color: #666666;
-  padding: 5px;
+  padding: 0.25rem;
   vertical-align: top;
   margin-bottom: 0.25rem;
   width: auto;
@@ -127,7 +127,7 @@ input[type="number"] {
   height: auto;
   position: relative;
   background-color: #666666;
-  padding: 5px;
+  padding: 0.26rem;
   vertical-align: top;
   width: auto;
   min-width: 8.6rem;
@@ -139,7 +139,7 @@ input[type="number"] {
   height: auto;
   position: relative;
   background-color: #666666;
-  padding: 5px;
+  padding: 0.26rem;
   vertical-align: top;
   width: auto;
   min-width: 8.6rem;
@@ -200,15 +200,15 @@ input[type="number"] {
 
 #player_lp_history {
   text-align: right;
-  padding: 5px;
-  margin: 5px;
+  padding: 0.25rem;
+  margin: 0.25rem;
   width: auto;
 }
 
 #opponent_lp_history {
   text-align: right;
-  padding: 5px;
-  margin: 5px;
+  padding: 0.25rem;
+  margin: 0.25rem;
   width: auto;
 }
 
@@ -216,7 +216,7 @@ input[type="number"] {
   background-color: #666666;
   text-align: center;
   position: relative;
-  padding: 5px;
+  padding: 0.25rem;
   width: auto;
 }
 
@@ -236,8 +236,8 @@ input[type="number"] {
 
 label {
   color: #ffffff;
-  font-size: 16px;
-  padding: 2px;
+  font-size: 1rem;
+  padding: 0.1rem;
   white-space: pre-wrap;
   width: auto;
 }
@@ -255,22 +255,22 @@ label {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid rgb(97, 2, 43);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(97, 2, 43);
   outline: none;
   cursor: pointer;
   color: #ffffff;
-  padding: 5px 8px 5px 8px;
+  padding: 0.3rem 0.45rem 0.3rem 0.45rem;
   box-shadow: inset 1px 1px 4px rgb(31, 6, 17);
   background: rgb(124, 43, 124);
   width: 10rem;
-  min-width: 30px;
+  min-width: 2rem;
   margin-bottom: 0.25rem;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 2px #000000;
-  min-height: 30px;
+  box-shadow: 0 0.15rem #000000;
+  min-height: 1.9rem;
   position: relative;
 }
 

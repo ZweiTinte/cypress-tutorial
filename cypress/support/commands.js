@@ -25,7 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 import {
+  DECREASE_AMOUNT,
   DECREASE_RESULT,
+  EXPECTED_LP,
   INCREASE_RESULT,
   INITIAL_LP,
   LP_CHANGE_AMOUNT,
@@ -99,4 +101,34 @@ Cypress.Commands.add("assertInitialStateOf", (player) => {
   cy.get(`[data-cy='${player.id}_history_label']`)
     .invoke("text")
     .should("equal", INITIAL_LP);
+});
+
+Cypress.Commands.add("useEachRngButtonOnce", () => {
+  const MAXIMUM_NUMBER = 30;
+  const RANDOM_NUMBER = Math.floor(Math.random() * MAXIMUM_NUMBER) + 1;
+
+  // use rng x button
+  cy.get("[data-cy='ngx_input']").type(RANDOM_NUMBER);
+  cy.get("[data-cy='rng_x']").click();
+  cy.assertXRng(RANDOM_NUMBER);
+
+  // use rng dice button
+  cy.get("[data-cy='rng_dice']").click();
+  cy.assertDiceRng();
+
+  // use rng coin button
+  cy.get("[data-cy='rng_coin']").click();
+  cy.assertCoinRng();
+});
+
+Cypress.Commands.add("simulateGame", (player) => {
+  cy.get(`[data-cy='${player.id}_lp_input']`).type(LP_CHANGE_AMOUNT);
+  cy.get(`[data-cy='${player.id}_increase_button']`).click();
+
+  cy.get(`[data-cy='${player.id}_lp_input']`).clear().type(DECREASE_AMOUNT);
+  cy.get(`[data-cy='${player.id}_decrease_button']`).click();
+
+  cy.get(`[data-cy='${player.id}_lp_label']`)
+    .invoke("text")
+    .should("equal", EXPECTED_LP);
 });

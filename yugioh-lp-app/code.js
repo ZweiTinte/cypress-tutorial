@@ -1,4 +1,4 @@
-const BASE_LP = 8000;
+const BASE_LP = "8.000";
 const PLAYER_NAME = "Player 1";
 const OPPONENT_NAME = "Player 2";
 let game = [];
@@ -46,8 +46,14 @@ function newGame() {
 function resetFields() {
   document.getElementById("player_lp").innerHTML = BASE_LP;
   document.getElementById("opponent_lp").innerHTML = BASE_LP;
-  document.getElementById("player_lp_history").innerHTML = "";
-  document.getElementById("opponent_lp_history").innerHTML = "";
+  document.getElementById("player_lp_history").innerHTML = BASE_LP;
+  document.getElementById("opponent_lp_history").innerHTML = BASE_LP;
+  document
+    .getElementById("opponent_lp_history")
+    .appendChild(document.createElement("BR"));
+  document
+    .getElementById("player_lp_history")
+    .appendChild(document.createElement("BR"));
   document.getElementById("one_x_label").innerHTML = "";
   document.getElementById("one_six_label").innerHTML = "";
   document.getElementById("zero_one_label").innerHTML = "";

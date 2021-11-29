@@ -49,49 +49,56 @@
 
       <div id="resetOrLoadGame">
         <div class="resetOrLoadButton">
-          <div id ="gameInfo" hidden data-cy="game_info"></div>
-          <button id="reset_button" data-cy="reset_button" onclick="newGame()">New Game</button>
-          <button id="load_button" data-cy="load_button" onclick="loadGame()">Load Game</button>
+          <div style="height:auto;">
+            <div id="gameInfo" hidden data-cy="game_info"></div>
+            <button id="reset_button" data-cy="reset_button" onclick="newGame()">New Game</button>
+            <button id="load_button" data-cy="load_button" onclick="loadGame()">Load Game</button>
+            <div style='clear:both;'></div>
+          </div>
+          <div id="loadItems"></div>
+          <div style='clear:both;'></div>
         </div>
         <div id="gameSelection"></div>
       </div>
 
-      <div id="opponent">
-        <div class="op_lp_section">
-          <label class="name_labels" id="opponentName" data-cy="op_name_label">Player 2:</label>
-          <label id="opponent_lp" data-cy="op_lp_label">8.000</label>
-        </div>
-        <div class="lp_updown">
-          <div>
-            <input type="number" id="op_increase" data-cy="op_lp_input"/>
+      <div id="lp_section">
+        <div id="opponent">
+          <div class="op_lp_section">
+            <label class="name_labels" id="opponentName" data-cy="op_name_label">Player 2:</label>
+            <label id="opponent_lp" data-cy="op_lp_label">8.000</label>
           </div>
-          <div class="buttongroup">
-            <button class="lp_change_button" data-cy="op_increase_button" onclick="increase(false)">+</button>
-            <button class="lp_change_button" data-cy="op_decrease_button" onclick="decrease(false)">-</button>
+          <div class="lp_updown">
+            <div>
+              <input type="number" id="op_increase" data-cy="op_lp_input" />
+            </div>
+            <div class="buttongroup">
+              <button class="lp_change_button" data-cy="op_increase_button" onclick="increase(false)">+</button>
+              <button class="lp_change_button" data-cy="op_decrease_button" onclick="decrease(false)">-</button>
+            </div>
+          </div>
+          <div class="op_history">
+            <label id="opponent_lp_history" data-cy="op_history_label">8.000<br /></label>
           </div>
         </div>
-        <div class="op_history">
-          <label id="opponent_lp_history" data-cy="op_history_label">8.000<br /></label>
+        <div id="player">
+          <div class="pl_lp_section">
+            <label class="name_labels" id="playerName" data-cy="pl_name_label">Player 1:</label>
+            <label id="player_lp" data-cy="pl_lp_label">8.000</label>
+          </div>
+          <div class="lp_updown">
+            <div>
+              <input type="number" id="pl_increase" data-cy="pl_lp_input" />
+            </div>
+            <div class="buttongroup">
+              <button class="lp_change_button" data-cy="pl_increase_button" onclick="increase(true)">+</button>
+              <button class="lp_change_button" data-cy="pl_decrease_button" onclick="decrease(true)">-</button>
+            </div>
+          </div>
+          <div class="pl_history">
+            <label id="player_lp_history" data-cy="pl_history_label">8.000<br /></label>
+          </div>
+        </div>
         </div>
       </div>
-      <div id="player">
-        <div class="pl_lp_section">
-          <label class="name_labels" id="playerName" data-cy="pl_name_label">Player 1:</label>
-          <label id="player_lp" data-cy="pl_lp_label">8.000</label>
-        </div>
-        <div class="lp_updown">
-          <div>
-            <input type="number" id="pl_increase" data-cy="pl_lp_input"/>
-          </div>
-          <div class="buttongroup">
-            <button class="lp_change_button" data-cy="pl_increase_button" onclick="increase(true)">+</button>
-            <button class="lp_change_button" data-cy="pl_decrease_button" onclick="decrease(true)">-</button>
-          </div>
-        </div>
-        <div class="pl_history">
-          <label id="player_lp_history" data-cy="pl_history_label">8.000<br /></label>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

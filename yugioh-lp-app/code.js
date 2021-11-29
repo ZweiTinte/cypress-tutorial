@@ -36,6 +36,7 @@ function generateRandomNumberX() {
 }
 
 function newGame() {
+  removeAllChildNodes(document.getElementById("loadItems"));
   if (game.length) {
     games.push(game);
   }
@@ -62,13 +63,23 @@ function resetFields() {
   document.getElementById("op_increase").value = "";
 }
 
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
 function loadGame() {
+  removeAllChildNodes(document.getElementById("loadItems"));
   for (let i = 0; i < games.length; i++) {
     let button = document.createElement("BUTTON");
     let buttonLabel = document.createElement("LABEL");
     let newLine = document.createElement("DIV");
+    let floatEnd = document.createElement("DIV");
 
+    floatEnd.setAttribute("style", "clear:both;");
     button.setAttribute("class", "loadButton");
+    buttonLabel.setAttribute("class", "loadButtonLabel");
     button.innerHTML = "load";
     newLine.setAttribute("id", "listItem" + i);
     newLine.setAttribute("class", "buttongroup");
@@ -77,9 +88,10 @@ function loadGame() {
     button.addEventListener("click", function () {
       load(i);
     });
-    document.getElementById("gameSelection").appendChild(newLine);
+    document.getElementById("loadItems").appendChild(newLine);
     document.getElementById("listItem" + i).appendChild(button);
     document.getElementById("listItem" + i).appendChild(buttonLabel);
+    document.getElementById("listItem" + i).appendChild(floatEnd);
   }
 }
 

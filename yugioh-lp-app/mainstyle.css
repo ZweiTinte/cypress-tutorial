@@ -30,7 +30,6 @@ input[type="number"] {
 }
 
 .number_generators {
-  margin-left: 0, 25rem auto;
   display: inline-block;
   position: relative;
 }
@@ -45,7 +44,6 @@ input[type="number"] {
 }
 
 .ng_labels_x {
-  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
   position: relative;
@@ -53,7 +51,6 @@ input[type="number"] {
 }
 
 .ng_labels {
-  margin-right: 0.25rem auto;
   display: inline-block;
   position: relative;
   line-height: 35px;
@@ -81,32 +78,27 @@ input[type="number"] {
 }
 
 #one_six_label {
-  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
 }
 
 #zero_one_label {
-  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
 }
 
 #one_x_label {
-  margin-right: 0.25rem auto;
   display: flex;
   justify-content: right;
   width: auto;
 }
 
 #number_generators {
-  display: fblock;
   top: 0%;
   height: auto;
   position: relative;
   background-color: #666666;
   padding: 0.25rem;
-  vertical-align: top;
   margin-bottom: 0.25rem;
   width: auto;
   min-width: 18rem;
@@ -140,7 +132,6 @@ input[type="number"] {
   height: auto;
   position: relative;
   background-color: #666666;
-  vertical-align: top;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-top: 0.25rem;
@@ -231,14 +222,12 @@ input[type="number"] {
   text-align: right;
   padding: 0.25rem;
   margin: 0.25rem;
-  width: auto;
 }
 
 #op_lp_history {
   text-align: right;
   padding: 0.25rem;
   margin: 0.25rem;
-  width: auto;
 }
 
 .lp_updown {
@@ -268,7 +257,6 @@ label {
   font-size: 1rem;
   padding: 0.1rem;
   white-space: pre-wrap;
-  width: auto;
 }
 
 .name_labels {

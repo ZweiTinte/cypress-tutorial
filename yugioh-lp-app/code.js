@@ -82,16 +82,21 @@ function loadGame() {
     let floatEnd = document.createElement("DIV");
 
     floatEnd.setAttribute("style", "clear:both;");
-    button.setAttribute("class", "loadButton");
-    buttonLabel.setAttribute("class", "loadButtonLabel");
-    button.innerHTML = "load";
-    newLine.setAttribute("id", "listItem" + i);
-    newLine.setAttribute("class", "buttongroup");
 
-    buttonLabel.innerHTML = "Game " + (i + 1);
+    button.setAttribute("class", "loadButton");
+    button.setAttribute("data-cy", "loadButton" + i);
+    button.innerHTML = "load";
     button.addEventListener("click", function () {
       load(i);
     });
+
+    buttonLabel.setAttribute("class", "loadButtonLabel");
+    buttonLabel.setAttribute("data-cy", "loadButtonLabel" + i);
+    buttonLabel.innerHTML = "Game " + (i + 1);
+
+    newLine.setAttribute("id", "listItem" + i);
+    newLine.setAttribute("class", "buttongroup");
+
     document.getElementById("loadItems").appendChild(newLine);
     document.getElementById("listItem" + i).appendChild(button);
     document.getElementById("listItem" + i).appendChild(buttonLabel);
@@ -101,6 +106,7 @@ function loadGame() {
 
 function load(gameId) {
   resetFields();
+  removeAllChildNodes(document.getElementById("loadItems"));
   document.getElementById("gameSelection").innerHTML = "";
   const GAME = games[gameId];
   GAME.forEach(function (step) {

@@ -130,6 +130,10 @@ Cypress.Commands.add("simulateGame", (player) => {
   cy.get(`[data-cy='${player.id}_lp_input']`).clear().type(DECREASE_AMOUNT);
   cy.get(`[data-cy='${player.id}_decrease_button']`).click();
 
+  cy.assertLpAfterSimulation(player);
+});
+
+Cypress.Commands.add("assertLpAfterSimulation", (player) => {
   cy.get(`[data-cy='${player.id}_lp_label']`)
     .invoke("text")
     .should("equal", EXPECTED_LP);

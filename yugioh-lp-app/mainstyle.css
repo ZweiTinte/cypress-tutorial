@@ -117,7 +117,7 @@ input[type="number"] {
   max-width: 20rem;
 }
 
-#opponent {
+#op {
   height: auto;
   background-color: #666666;
   padding: 0.26rem;
@@ -126,7 +126,7 @@ input[type="number"] {
   float: left;
 }
 
-#player {
+#pl {
   height: auto;
   background-color: #666666;
   padding: 0.26rem;
@@ -217,24 +217,24 @@ input[type="number"] {
   width: auto;
 }
 
-#player_lp {
+#pl_lp {
   font-size: 1.4rem;
   width: auto;
 }
 
-#opponent_lp {
+#op_lp {
   font-size: 1.4rem;
   width: auto;
 }
 
-#player_lp_history {
+#pl_lp_history {
   text-align: right;
   padding: 0.25rem;
   margin: 0.25rem;
   width: auto;
 }
 
-#opponent_lp_history {
+#op_lp_history {
   text-align: right;
   padding: 0.25rem;
   margin: 0.25rem;

@@ -60,6 +60,7 @@ function resetFields() {
   document
     .getElementById("pl_lp_history")
     .appendChild(document.createElement("BR"));
+  document.getElementById("ngx_input").value = "";
   document.getElementById("one_x_label").innerHTML = "";
   document.getElementById("one_six_label").innerHTML = "";
   document.getElementById("zero_one_label").innerHTML = "";

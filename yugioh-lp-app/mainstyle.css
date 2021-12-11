@@ -17,10 +17,11 @@ body {
 input[type="number"] {
   appearance: textfield;
   text-align: center;
-  width: 6.5rem;
+  width: 6.8rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.15rem #000000;
-  min-height: 1.4rem;
+  min-height: 1.6rem;
+  border: 0.15rem solid #920b87;
 }
 
 .ng_row {
@@ -73,8 +74,8 @@ input[type="number"] {
 
 #ngx_input {
   position: relative;
-  width: 3rem;
-  margin-top: 0.25rem;
+  width: 3.3rem;
+  margin-top: 0.2rem;
 }
 
 #one_six_label {

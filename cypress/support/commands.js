@@ -85,6 +85,7 @@ Cypress.Commands.add("assertXRng", (RANDOM_NUMBER) => {
 });
 
 Cypress.Commands.add("assertEmptyRngLabels", () => {
+  cy.get("[data-cy='ngx_input']").invoke("val").should("be.empty");
   cy.get("[data-cy='one_x_label']").invoke("text").should("be.empty");
   cy.get("[data-cy='one_six_label']").invoke("text").should("be.empty");
   cy.get("[data-cy='zero_one_label']").invoke("text").should("be.empty");

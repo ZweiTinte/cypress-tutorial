@@ -35,6 +35,8 @@ import {
   PLAYER,
 } from "./helper";
 
+let LOCAL_STORAGE_MEMORY = {};
+
 Cypress.Commands.add("increaseLp", (player) => {
   cy.get(`[data-cy='${player.id}_lp_input']`).type(LP_CHANGE_AMOUNT);
   cy.get(`[data-cy='${player.id}_increase_button']`).click();
@@ -152,5 +154,19 @@ Cypress.Commands.add("assertGameInfo", () => {
     cy.wrap(GAME[2].lpChange).should("equal", parseInt(LP_CHANGE_AMOUNT));
     cy.wrap(GAME[3].player).should("equal", OPPONENT.name);
     cy.wrap(GAME[3].lpChange).should("equal", -parseInt(DECREASE_AMOUNT));
+  });
+});
+
+// save session data at the end of an it()
+Cypress.Commands.add("saveLocalStorage", () => {
+  Object.keys(localStorage).forEach((key) => {
+    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+  });
+});
+
+// restore session data at the beginning of an it()
+Cypress.Commands.add("restoreLocalStorage", () => {
+  Object.keys(LOCAL_STORAGE_MEMORY).forEach((key) => {
+    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
   });
 });
